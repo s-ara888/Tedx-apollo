@@ -14,14 +14,60 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="background-letters" id="backgroundLetters"></div>
   <section class="main">
-  
+   
     <img id="lyre" src="./imgs/lyrefr.png" alt="Lyre" />
     <img id="decoration" src="./imgs/deco.png" alt="Stage Decoration" />
     
     <h1 id="apollo-text">APOLLO</h1>
     <h2 id="sub">Beyond the Lyre</h2>
 
+  </section>
+<section class="speakers-section">
+    <h2>OUR SPEAKERS</h2>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel(-1)">&#8592;</button>
+      
+      <div class="carousel" id="carousel">
+        <!-- Speaker Card -->
+        <div class="card">
+          <img src="" alt="Javier Villamizar">
+          <div class="info">
+            <h3>JAVIER VILLAMIZAR</h3>
+            <p>OPERATING PARTNER AT <strong>SOFTBANK INVESTMENT ADVISERS</strong></p>
+          </div>
+        </div>
+
+       <div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg" alt="Bill Gates">
+  <div class="info">
+    <h3>BILL GATES</h3>
+    <p>CO-FOUNDER OF <strong>MICROSOFT</strong> & PHILANTHROPIST AT <strong>BILL & MELINDA GATES FOUNDATION</strong></p>
+          </div>
+        </div>
+
+
+       <div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Steve_Jobs_Headshot_2010-CROP.jpg/440px-Steve_Jobs_Headshot_2010-CROP.jpg" alt="Steve Jobs">
+  <div class="info">
+    <h3>STEVE JOBS</h3>
+    <p>CO-FOUNDER & FORMER CEO OF <strong>APPLE INC.</strong></p>
+  </div>
+</div>
+
+
+        <div class="card">
+          <img src="https://via.placeholder.com/300x350" alt="Simon Clowes">
+          <div class="info">
+            <h3>SIMON CLOWES</h3>
+            <p>CREATIVE DIRECTOR AT <strong>OBJECT SUBJECT FORM</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrow right" onclick="scrollCarousel(1)">&#8594;</button>
+    </div>
   </section>
 
   <!-- Link JS -->
