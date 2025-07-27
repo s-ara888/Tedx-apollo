@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollValue = window.scrollY;
 
     // Cap scroll movement at 71.2
-    const maxScroll = 71.2;
+    const maxScroll = 58.400001525878906;
     const cappedScroll = Math.min(scrollValue, maxScroll);
 
     // Lyre movement
