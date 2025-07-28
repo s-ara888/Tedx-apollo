@@ -10,10 +10,60 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Bootstrap CSS (optional if already using it) -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="red-top-bar"></div>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="tedx-logo-line"></div>
+      <div class="tedx-text">
+        <div class="tedx-name">
+          <span class="ted">TED</span><span class="x">x</span> Maadi STEM Youth
+        </div>
+        <div class="event-tagline">
+          <span class="x-red">x</span> = independently organized TED event
+        </div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="coming-soon.html">2025 Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="previous-events.html">Previous Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <div class="background-letters" id="backgroundLetters"></div>
   <section class="main">
    
@@ -22,53 +72,136 @@
     
     <h1 id="apollo-text">APOLLO</h1>
     <h2 id="sub">Beyond the Lyre</h2>
+ 
+</section>
 
-  </section>
 <section class="speakers-section">
-    <h2>OUR SPEAKERS</h2>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel(-1)">&#8592;</button>
-      
-      <div class="carousel" id="carousel">
-        <!-- Speaker Card -->
-        <div class="card">
-          <img src="" alt="Javier Villamizar">
-          <div class="info">
-            <h3>JAVIER VILLAMIZAR</h3>
-            <p>OPERATING PARTNER AT <strong>SOFTBANK INVESTMENT ADVISERS</strong></p>
-          </div>
-        </div>
+  <h2>Our Speakers</h2>
+  <div class="carousel-container">
+    <button class="scroll-btn left">&#8592;</button>
 
+ 
+    <div class="carousel" id="carousel">
+      <!-- Repeat these .card blocks as needed -->
+      <div class="card">
+        <img src="./imgs/person 4.jpg" alt="Speaker 1">
+        <h3>Bill Gates</h3>
+        <p>Co-founder of microsoft</p>
+      </div>
+      <div class="card">
+        <img src="./imgs/person 3.jpg" alt="Speaker 2">
+        <h3>Steve Jobs</h3>
+        <p>Founder of Apple</p>
+      </div>
+      <!-- Add more cards -->
        <div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg" alt="Bill Gates">
-  <div class="info">
-    <h3>BILL GATES</h3>
-    <p>CO-FOUNDER OF <strong>MICROSOFT</strong> & PHILANTHROPIST AT <strong>BILL & MELINDA GATES FOUNDATION</strong></p>
-          </div>
-        </div>
-
-
-       <div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Steve_Jobs_Headshot_2010-CROP.jpg/440px-Steve_Jobs_Headshot_2010-CROP.jpg" alt="Steve Jobs">
-  <div class="info">
-    <h3>STEVE JOBS</h3>
-    <p>CO-FOUNDER & FORMER CEO OF <strong>APPLE INC.</strong></p>
-  </div>
-</div>
-
-
-        <div class="card">
-          <img src="https://via.placeholder.com/300x350" alt="Simon Clowes">
-          <div class="info">
-            <h3>SIMON CLOWES</h3>
-            <p>CREATIVE DIRECTOR AT <strong>OBJECT SUBJECT FORM</strong></p>
-          </div>
-        </div>
+        <img src="./imgs/person 2.jpg" alt="Speaker 2">
+        <h3>Maha hossam</h3>
+        <p>Founder of Samsung</p>
+      </div>
+      <div class="card">
+        <img src="./imgs/person 5.jpg" alt="Speaker 2">
+        <h3>Mark Zuckerberg</h3>
+        <p>Facebook CEO</p>
       </div>
 
-      <button class="arrow right" onclick="scrollCarousel(1)">&#8594;</button>
+      <div class="card">
+        <img src="./imgs/person 6.jpg" alt="Speaker 2">
+        <h3>Andy Jassy</h3>
+        <p>Amazon CEO</p>
+      </div>
+
+      <div class="card">
+        <img src="./imgs/person 5.jpg" alt="Speaker 2">
+        <h3>Mark Zuckerberg</h3>
+        <p>Facebook CEO</p>
+      </div>
+
+
+      <div class="card">
+        <img src="./imgs/person 5.jpg" alt="Speaker 2">
+        <h3>Mark Zuckerberg</h3>
+        <p>Facebook CEO</p>
+      </div>
+
+
+      <div class="card">
+        <img src="./imgs/person 5.jpg" alt="Speaker 2">
+        <h3>Mark Zuckerberg</h3>
+        <p>Facebook CEO</p>
+      </div>
+
+      
+      
+      
+
     </div>
-  </section>
+
+    <button class="scroll-btn right">&#8594;</button>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
   <!-- Link JS -->
   <script src="main.js"></script>
+   <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row d-flex justify-content-between align-items-start">
+
+        <!-- Logo & Info -->
+        <div class="col-12 col-md-4 mb-3 mb-md-0 text-center text-md-left">
+          <div id="footer-logo" class="tedx_footer1">
+            <span class="tedx_footer">TEDx</span>
+            <span class="tedx_logo_footer">Maadi STEM Youth</span>
+            <div class="tedx_info_footer">
+              <span class="tedx_info_x_footer">x</span>
+              <span class="tedx_info_x_text_footer">= independently organized TED event</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-12 col-md-1 mb-3 mb-md-0 text-center">
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.facebook.com/TEDxYouthMaadiSTEM/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/tedx.maadi/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:tedx.maadistem@gmail.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-12 col-md-7 text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item d-block d-md-inline"><a href="index.html">Home</a></li>
+            <li class="list-inline-item d-block d-md-inline"><a href="coming-soon.html">2025 Event</a></li>
+            <li class="list-inline-item d-block d-md-inline"><a href="previous-events.html">Previous Events</a></li>
+            <li class="list-inline-item d-block d-md-inline"><a href="contact.html">About Us</a></li>
+          </ul>
+          <div class="rights mt-3">
+            <span id="demo">2025</span> &bull; All Rights Reserved | TEDx Maadi STEM Youth
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

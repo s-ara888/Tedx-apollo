@@ -45,7 +45,7 @@ section.main {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  margin-top: 100px
+  margin-top: 50px
 }
 
 
@@ -72,10 +72,10 @@ position: absolute;
     z-index: 2;
 }
 #apollo-text {
-  position: absolute;
+ position: absolute;
     top: -100px;
     left: 50%;
-    transform: translate(-404px, 301px);
+    transform: translate(-409px, 471px);
     font-size: 264px;
     color: #E62B1E;
     font-family: 'myfont', serif;
@@ -84,111 +84,271 @@ position: absolute;
     text-shadow: 2px 2px 5px black;
     letter-spacing: 10px;
     font-weight: 100;
+
 }
 #sub{
    position: absolute;
     top: -100px;
     left: 50%;
-    transform: translate(-298px, 700px);
+    transform: translate(-298px, 720px);
     font-size: 60px;
     color: #E62B1E;
     font-family: 'myfont', serif;
     transition: top 0.3s ease;
     z-index: 4;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 8px #000;
     letter-spacing: 10px;
     font-weight: 100;
+    
 }
+
 .speakers-section {
-  padding: 40px 20px;
+  background-color: #0a0a0a; /* dark mythological feel */
+  color: #f5f0e1;            /* warm parchment-like text */
+  padding: 50px 20px;
   text-align: center;
+  font-family: 'Georgia', serif;
 }
 
-.speakers-section h2 {
-  color: #1e1eb4;
-  font-size: 32px;
+h2 {
+  font-size: 2.5rem;
+  color: gold;
   margin-bottom: 20px;
-  position: relative;
 }
 
-.speakers-section h2::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 60px;
-  background-color: #fdd835;
-  margin: 10px auto 0;
-}
-
-.carousel-wrapper {
+.carousel-container {
   position: relative;
-  max-width: 90%;
-  margin: 0 auto;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
-  transition: transform 0.4s ease-in-out;
-  scroll-behavior: smooth;
+  gap: 20px; /* MUST match the gap used in JS */
   overflow-x: auto;
-  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
 .card {
-  min-width: 280px;
-  background-color: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex-shrink: 0;
-  text-align: left;
+  background-color: #1a1a1a;
+  border: 2px solid gold;
+  border-radius: 10px;
+  flex: 0 0 250px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
   width: 100%;
-  height: 350px;          /* Fixed height for consistent card size */
-  object-fit: cover;      /* Ensures image fills the box without distortion */
-  display: block;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-
-.info {
-  padding: 15px;
-}
-
-.info h3 {
-  color: #fdd835;
-  font-size: 16px;
-  margin: 0 0 10px 0;
-}
-
-.info p {
-  color: #333;
-  font-size: 14px;
-}
-
-.arrow {
+.scroll-btn {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
+  background-color: black;
+  color: gold;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
 }
 
-.arrow.left {
-  left: -10px;
+.scroll-btn.left {
+  left: 10px;
 }
 
-.arrow.right {
-  right: -10px;
+.scroll-btn.right {
+  right: 10px;
 }
+.navbar {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 4px; /* space for red bar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030;
+    }
 
+    .red-top-bar {
+      height: 4px;
+      background-color: #e62b1e;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1040;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tedx-logo-line {
+      width: 4px;
+      height: 30px;
+      background-color: #e62b1e;
+      border-radius: 2px;
+      margin-right: 10px;
+    }
+
+    .tedx-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .tedx-name {
+      font-size: 24px;
+    }
+
+    .ted {
+      color: #e62b1e;
+      font-weight: 700;
+    }
+
+    .x {
+      color: #ccc;
+      font-weight: 700;
+    }
+
+    .event-tagline {
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .event-tagline .x-red {
+      color: #e62b1e;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: white !important;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .nav-link:hover,
+    .nav-item.active .nav-link {
+      color: #e62b1e !important;
+    }
+
+    @media (max-width: 768px) {
+      .tedx-name {
+        font-size: 18px;
+      }
+
+      .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+    footer {
+      background-color: #0a0a0a;
+      color: #ccc;
+      padding: 40px 0;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    #footer-logo .tedx_footer {
+      color: #e62b1e;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    #footer-logo .tedx_logo_footer {
+      color: white;
+      font-size: 24px;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+
+    .tedx_info_footer {
+      margin-top: 5px;
+    }
+
+    .tedx_info_x_footer {
+      color: #e62b1e;
+      font-weight: bold;
+    }
+
+    .tedx_info_x_text_footer {
+      color: white;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    footer ul li {
+      margin-bottom: 15px;
+    }
+
+    footer i {
+      color: white;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover i {
+      color: #e62b1e;
+    }
+
+    footer .list-inline-item a {
+      color: #888;
+      font-size: 16px;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    footer .list-inline-item a:hover {
+      color: #fff;
+    }
+
+    footer .rights {
+      border-top: 1px solid #555;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @media (max-width: 767px) {
+      #footer-logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      footer .list-inline-item {
+        display: block;
+        margin: 10px 0;
+      }
+
+      footer i {
+        font-size: 24px;
+      }
+    }
 

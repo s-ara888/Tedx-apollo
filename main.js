@@ -28,14 +28,45 @@ document.addEventListener('DOMContentLoaded', function () {
     
     container.appendChild(span);
   }
-  function scrollCarousel(direction) {
-  const carousel = document.getElementById("carousel");
-  const cardWidth = carousel.querySelector(".card").offsetWidth + 20; // card + gap
-  carousel.scrollBy({
-    left: direction * cardWidth,
-    behavior: 'smooth'
+  const leftBtn = document.querySelector('.scroll-btn.left');
+  const rightBtn = document.querySelector('.scroll-btn.right');
+  const carousel = document.querySelector('.carousel');
+
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: -300,
+      behavior: 'smooth'
+    });
   });
-}
+
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({
+      left: 300,
+      behavior: 'smooth'
+    });
+  });
+  
+ 
+  const Carousel = document.getElementById('carousel');
+
+  function autoScrollByTwoCards() {
+    const card = carousel.querySelector('.card');
+    const gap = 20; // Must match the CSS `gap`
+    const cardWidth = card.offsetWidth + gap;
+    const scrollStep = cardWidth * 2;
+
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    let currentScroll = carousel.scrollLeft;
+
+    if (currentScroll + scrollStep >= maxScroll) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    }
+  }
+
+
+
 
 
 
