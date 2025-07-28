@@ -114,6 +114,7 @@ h2 {
   font-size: 2.5rem;
   color: gold;
   margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
 }
 
 .carousel-container {
@@ -351,4 +352,201 @@ h2 {
         font-size: 24px;
       }
     }
+    
+    .countdown-apollo {
+  font-family: 'myfont', serif;
+  font-size: 40px;
+  color: #e62b1e;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@700&display=swap');
+.tedx-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
 
+#tedx {
+      color: #e62b1e;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 200px;
+      text-shadow: 
+        0 0 10px rgba(230, 43, 30, 0.5), 
+        0 0 20px rgba(230, 43, 30, 0.4), 
+        0 0 30px rgba(230, 43, 30, 0.3);
+      position: absolute;
+     margin-left: 55%;
+     margin-top: 250px;
+     font-weight: bold;
+    }
+
+  
+
+    .tedx-bg span.ted {
+      color: #E62B1E;
+    }
+
+    .tedx-bg span.x {
+      color: #E62B1E;
+      font-size: 5rem;
+      vertical-align: super;
+      margin-left: -0.5rem;
+      letter-spacing: -1px;
+    }
+
+    .stone {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      background: url('your-stone-image.jpg') no-repeat center center;
+      background-size: cover;
+      border: 6px solid #8B0000;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      margin: 40px 20px;
+      z-index: 1;
+    }
+
+    .engraved-text {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: #ffffff;
+      text-shadow:
+        1px 1px 0 #333,
+        -1px -1px 0 #333,
+        1px -1px 0 #333,
+        -1px 1px 0 #333;
+      opacity: 0;
+    }
+
+    .engraved-animate {
+      animation: engrave 3s ease-out forwards;
+    }
+
+    @keyframes engrave {
+      0% {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+      }
+      100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+    }
+    .red-glow-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(230, 43, 30, 1); /* TEDx red */
+      box-shadow:
+        0 0 40px rgba(230, 43, 30, 0.8),
+        0 0 80px rgba(230, 43, 30, 0.6),
+        0 0 160px rgba(230, 43, 30, 0.4);
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow:
+          0 0 40px rgba(230, 43, 30, 0.8),
+          0 0 80px rgba(230, 43, 30, 0.6),
+          0 0 160px rgba(230, 43, 30, 0.4);
+      }
+      50% {
+        box-shadow:
+          0 0 60px rgba(230, 43, 30, 1),
+          0 0 120px rgba(230, 43, 30, 0.8),
+          0 0 200px rgba(230, 43, 30, 0.6);
+      }
+    }
+    .mission,.vision{
+      font-family: 'myfont', serif;
+      color: #f5f0e1;
+      font-size:  50px;
+    }
+     .cta-btn {
+      background-color: #ff2b06;
+      color: white;
+      font-weight: bold;
+      padding: 14px 42px;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      animation: glow 1.5s infinite alternate;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 6px #ff2b06;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff2b06;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 6px #ff2b06;
+      }
+      to {
+        box-shadow: 0 0 30px #ff2b06;
+      }
+    }
+    .ticket{
+      font-family: 'myfont', serif;
+      color: #e4bd48;
+      font-size:  150px;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 0 0 2px yellow;
+    }
+    .interactive-text {
+    color: yellow;
+    font-size: 100px;
+    cursor: pointer;
+    text-shadow: 0 0 1px #FFD700;
+    transition: color 0.4s ease-in-out,
+                transform 0.4s ease-in-out,
+                text-shadow 0.4s ease-in-out;
+    will-change: transform, color, text-shadow;
+  }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: red;
+    }
+
+    .location-text {
+      font-size: 1.25rem;
+      color: #ddd;
+      text-align: right;
+    }
+
+    .map-wrapper {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .map-wrapper:hover {
+      transform: scale(1.02);
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .location-text {
+        text-align: center;
+        margin-top: 1rem;
+      }
+    }

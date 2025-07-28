@@ -64,6 +64,67 @@ document.addEventListener('DOMContentLoaded', function () {
       carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
     }
   }
+ 
+  const eventDate = new Date("July 30, 2025 18:00:00").getTime();
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "The event has begun!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / 1000 / 60) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML = 
+      `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  window.addEventListener('scroll', () => {
+    animatedElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+  window.addEventListener("load", () => {
+      const engravings = document.querySelectorAll(".engraved-text");
+      engravings.forEach((text, index) => {
+        setTimeout(() => {
+          text.classList.add("engraved-animate");
+        }, index * 1000);
+      });
+    });
+    const tedx = document.getElementById("tedx");
+
+    // Add hover animation
+    tedx.addEventListener("mouseenter", () => {
+      tedx.classList.add("hovered");
+    });
+
+    tedx.addEventListener("mouseleave", () => {
+      tedx.classList.remove("hovered");
+    });
+
+    // Make TEDx follow cursor slightly
+    document.addEventListener("mousemove", (e) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const moveX = (e.clientX - centerX) * 0.02;
+      const moveY = (e.clientY - centerY) * 0.02;
+
+      tedx.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+
 
 
 
