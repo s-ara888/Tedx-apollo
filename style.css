@@ -14,6 +14,19 @@ body {
   padding: 20px;
   
 }
+.background-letters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+
+
 .background-letters span {
   position: absolute;
   color: rgba(255, 255, 255, 0.45);
@@ -23,10 +36,9 @@ body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
 .background-letters span:hover {
   transform: scale(1.8) rotate(360deg);
-  color: #ffd700; /* Golden color for interaction */
+  color: #ffd700;
   z-index: 1;
 }
 
@@ -38,6 +50,7 @@ body {
     transform: translateY(-100vh) rotate(360deg);
   }
 }
+
 
 
 section.main {
@@ -466,7 +479,125 @@ h2 {
       color: #f5f0e1;
       font-size:  50px;
     }
-     .cta-btn {
+     .cta-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.cta-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.cta-label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+}
+
+    .ticket{
+      font-family: 'myfont', serif;
+      color: #e4bd48;
+      font-size:  150px;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 0 0 2px yellow;
+    }
+    .interactive-text {
+    color: yellow;
+    font-size: 100px;
+    cursor: pointer;
+    text-shadow: 0 0 1px #FFD700;
+    transition: color 0.4s ease-in-out,
+                transform 0.4s ease-in-out,
+                text-shadow 0.4s ease-in-out;
+    will-change: transform, color, text-shadow;
+  }
+    /* LOCATION SECTION STYLES */
+/* Section Container */
+.location-section {
+ display: flex;
+  justify-content: center; /* center everything */
+  align-items: center; /* align text/map vertically */
+  gap: 40px; /* space between text and map */
+  flex-wrap: wrap; /* for mobile responsiveness */
+}
+
+.location-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.section-title {
+  font-size: 70px;
+  font-weight: bold;
+  color: red;
+  font-family: 'myfont', serif;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.location-text {
+  font-size: 25px;
+  color: #ddd;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.map-wrapper {
+  width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.map-wrapper:hover {
+  transform: scale(1.02);
+}
+
+iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .location-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-title,
+  .location-text {
+    text-align: center;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
       background-color: #ff2b06;
       color: white;
       font-weight: bold;
@@ -495,58 +626,4 @@ h2 {
         box-shadow: 0 0 30px #ff2b06;
       }
     }
-    .ticket{
-      font-family: 'myfont', serif;
-      color: #e4bd48;
-      font-size:  150px;
-      text-align: center;
-      margin-top: 20px;
-      text-shadow: 0 0 2px yellow;
-    }
-    .interactive-text {
-    color: yellow;
-    font-size: 100px;
-    cursor: pointer;
-    text-shadow: 0 0 1px #FFD700;
-    transition: color 0.4s ease-in-out,
-                transform 0.4s ease-in-out,
-                text-shadow 0.4s ease-in-out;
-    will-change: transform, color, text-shadow;
-  }
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: red;
-    }
-
-    .location-text {
-      font-size: 1.25rem;
-      color: #ddd;
-      text-align: right;
-    }
-
-    .map-wrapper {
-      max-width: 400px;
-      width: 100%;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .map-wrapper:hover {
-      transform: scale(1.02);
-    }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
-    }
-
-    @media (max-width: 768px) {
-      .location-text {
-        text-align: center;
-        margin-top: 1rem;
-      }
-    }
+    

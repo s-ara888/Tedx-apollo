@@ -15,19 +15,27 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
   const greekLetters = ["Α", "Β", "Γ", "Δ", "Ε", "Ζ", "Η", "Θ", "Ι", "Κ", "Λ", "Μ", "Ν", "Ξ", "Ο", "Π", "Ρ", "Σ", "Τ", "Υ", "Φ", "Χ", "Ψ", "Ω"];
-  const container = document.getElementById("backgroundLetters");
+const container = document.getElementById("backgroundLetters");
 
-  for (let i = 0; i < 100; i++) {
-    const span = document.createElement("span");
-    span.textContent = greekLetters[Math.floor(Math.random() * greekLetters.length)];
+const isMobile = window.innerWidth <= 768;
 
-    span.style.left = Math.random() * 100 + "vw";
-    span.style.top = Math.random() * 100 + "vh";
-    span.style.fontSize = Math.random() * 2 + 1 + "rem";
-    span.style.animationDuration = 5 + Math.random() * 10 + "s";
-    
-    container.appendChild(span);
-  }
+const letterCount = isMobile ? 50 : 100;
+for (let i = 0; i < letterCount; i++) 
+ {
+  const span = document.createElement("span");
+  span.textContent = greekLetters[Math.floor(Math.random() * greekLetters.length)];
+
+  span.style.left = Math.random() * 100 + "vw";
+  span.style.top = Math.random() * 100 + "vh";
+
+  // Smaller size for mobile
+  const fontSize = isMobile ? Math.random() * 1.5 + 0.5 : Math.random() * 2 + 1;
+  span.style.fontSize = fontSize + "rem";
+
+  span.style.animationDuration = (5 + Math.random() * 10) + "s";
+  container.appendChild(span);
+}
+
   const leftBtn = document.querySelector('.scroll-btn.left');
   const rightBtn = document.querySelector('.scroll-btn.right');
   const carousel = document.querySelector('.carousel');
