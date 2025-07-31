@@ -73,7 +73,7 @@ for (let i = 0; i < letterCount; i++)
     }
   }
  
-  const eventDate = new Date("July 30, 2025 18:00:00").getTime();
+  const eventDate = new Date("August 31, 2025 18:00:00").getTime();
   const timer = setInterval(() => {
     const now = new Date().getTime();
     const distance = eventDate - now;
@@ -103,14 +103,8 @@ for (let i = 0; i < letterCount; i++)
       }
     });
   });
-  window.addEventListener("load", () => {
-      const engravings = document.querySelectorAll(".engraved-text");
-      engravings.forEach((text, index) => {
-        setTimeout(() => {
-          text.classList.add("engraved-animate");
-        }, index * 1000);
-      });
-    });
+ 
+
     const tedx = document.getElementById("tedx");
 
     // Add hover animation
@@ -131,6 +125,22 @@ for (let i = 0; i < letterCount; i++)
 
       tedx.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
+ const scrollAmount = () => {
+  const card = document.querySelector(".carousel .card");
+  const style = getComputedStyle(card);
+  const gap = 20; // match your CSS gap
+  return card.offsetWidth + gap;
+};
+
+leftBtn.addEventListener("click", () => {
+  carousel.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+});
+
+rightBtn.addEventListener("click", () => {
+  carousel.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+});
+
+
 
 
 
