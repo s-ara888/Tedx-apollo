@@ -273,24 +273,17 @@ body {
   overflow: hidden;
 }
 
-.background-letters {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
 .background-letters span {
   position: absolute;
   color: rgba(255, 255, 255, 0.45);
-  font-size: 2rem;
+  font-size: calc(3vw + 10px); /* ✅ base scaling */
   animation: float 10s linear infinite;
   user-select: none;
   transition: transform 0.3s ease, color 0.3s ease;
+
+  /* ✅ random positioning */
+  top: calc(var(--randY, 50) * 1%);
+  left: calc(var(--randX, 50) * 1%);
 }
 
 .background-letters span:hover {
@@ -308,10 +301,24 @@ body {
   }
 }
 
-    ::selection {
-        background: #a71f15;
-        color: white;
-    }
+::selection {
+  background: #a71f15;
+  color: white;
+}
+
+/* ✅ Mobile fine-tuning */
+@media (max-width: 768px) {
+  .background-letters span {
+    font-size: calc(6vw + 8px); /* larger letters */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-letters span {
+    font-size: calc(8vw + 6px); /* very bold on small phones */
+    animation-duration: 12s; /* a bit slower for readability */
+  }
+}
 
 
 
